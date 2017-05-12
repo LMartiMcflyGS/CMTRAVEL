@@ -5,13 +5,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
-
+    <link rel="stylesheet" href="css/RedesSociales.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
 
+    <link rel="stylesheet" href="css/carrusel.css">
+
+
     <style>
    .jumbotron{
-       background-color:#7dcef6!important;
+       background-image:url(img/viaje1.jpg)!important;
+       background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 80%; 
+        top: 0; left: 0; width: 100%; height: 100%
        }
 
        ul {
@@ -22,20 +30,79 @@
 </head>
 <body>
        <div class="jumbotron col-md-12">
-                <div class="col-md-5"></div>
-                <div class="col-md-2"> 
-                    <img src="img/cmtravel.png" width="120px" height="150px">
+                <div class="col-md-2">
+                     <img src="img/cmtravel.png" width="150px" height="180px ">
                 </div>
                 <div class="col-md-5"></div>
+                <div class="col-md-5"> 
+                   
+                </div>
+               
     </div>
      
           <ul   class="nav nav-pills ">
-            <li class="active"><a href="#" >Inicio</a></li>
+            <li href="index.html" ><a href="#">Inicio</a></li>
             <li><a href="#products">Hoteles</a></li>
             <li><a href="#about">Paquetes</a></li>
             <li><a href="#contact">Servicios</a></li>
             <li><a href="#contact">Tours</a></li>
             <li><a href="#contact">Contacto</a></li>                
           </ul>
+	</div>
+   
+  
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ 
+  <img src="img/1.jpg" style="width:100%;height:30%!important;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/2.png" style="width:100%; height:30%!important;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="img/3.png" style="width:100%;height:30%!important;">
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
 </body>
 </html>
